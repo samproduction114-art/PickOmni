@@ -1,4 +1,4 @@
-html_code = """<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -502,6 +502,7 @@ html_code = """<!DOCTYPE html>
             <div class="search-box">
                 <input type="text" id="searchInput" placeholder="Search products, deals, tags..." onkeyup="applyFilters()">
             </div>
+            <!-- Currency Switcher (PKR / USD) -->
             <select class="currency-select" id="currencySelect" onchange="changeCurrency()">
                 <option value="PKR">PKR (Rs.)</option>
                 <option value="USD">USD ($)</option>
@@ -526,6 +527,7 @@ html_code = """<!DOCTYPE html>
         <h1>Discover Hand-Picked Products You Can <span>Rely On.</span></h1>
         <p>We test, review, and curate the best deals across all categories so you save time and money — no fluff, no filler, just honest picks with Cash on Delivery across Pakistan.</p>
 
+        <!-- Price Range Filter Buttons -->
         <div class="filter-group">
             <button class="filter-btn active" onclick="filterPrice('all', this)">All Prices</button>
             <button class="filter-btn" id="filterUnder1000" onclick="filterPrice('1000', this)">Under Rs. 1,000</button>
@@ -573,7 +575,7 @@ html_code = """<!DOCTYPE html>
                 discount: '38% OFF',
                 rating: '4.8',
                 image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&auto=format&fit=crop',
-                whatsapp: 'https://wa.me/92318571421?text=Hello,%20I%20want%20to%20order%20this%20product'
+                whatsapp: '#'
             },
             {
                 title: 'Handmade Calligraphy Wall Art Frame',
@@ -767,9 +769,3 @@ html_code = """<!DOCTYPE html>
     </script>
 </body>
 </html>
-"""
-
-with open("index.html", "w") as f:
-    f.write(html_code)
-
-print("index.html updated successfully")
